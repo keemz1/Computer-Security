@@ -1,0 +1,126 @@
+﻿<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title></title>
+    <script src="prevent.js"></script>
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="added content/sticky.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="../Style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div>
+        <div class="container-fluid">
+            <h1 class="mb-4">Room 2</h1>
+            <div class="card w-50">
+                <div class="card-body">
+                    <h5 class="card-title">Instructions</h5>
+                    <p>
+                        Use the riddle, the cypher and the photo given to figure out the answer.
+                        <br />
+                        It's pretty easy to be honest.
+                    </p>
+                </div>
+            </div>
+            <div class="card" style="width:100%">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card-item left-sidebar sticky col-md-4" data-spy="affix"
+                                 data-offset-top="205"
+                                 style="height:50px">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <span class="mr-2">
+                                                Time Remaining:
+                                            </span>
+                                            <span id="countdown">
+                                                <script src="timer.js"></script>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="card" style="">
+                                    <div class="card-header"
+                                         style="font-family:'Lobster', cursive; margin:auto 0;">
+                                        Riddle Me this
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <img src="../Images/p2_riddle.jpg" height="400" width="400" />
+                                            <footer class="blockquote-footer">
+                                                In order to see the answer
+                                                <cite title="Source Title">
+                                                    you have to look at 'see' the answer
+                                                </cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <p class="mb-2" style="text-align:left">
+                                    Electric surges moves across the track, with signals far and wide <br>
+                                    of my victory. Given "DBJRWKXUC" what is the answer to the riddle? <br><br>
+
+                                    (hint: count the number of words in the riddle)
+
+                                    <br>
+
+                                    <input type=text
+                                           class="col col-form-label no-wrap form-control"
+                                           id="name">
+                                    <button onclick="usainFunc()"
+                                            class="btn rounded btn-outline-success mt-3 mb-3 col-sm-2">
+                                        OK
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+
+        function usainFunc() {
+
+            var bolt = document.getElementById("name").value;
+            var usain = bolt.toLowerCase();
+            if (usain.localeCompare("usainbolt") === 0) {
+                alert("works");
+                window.location.href = "page3.html";
+            }
+            else {
+
+                alert("nice try");
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>
